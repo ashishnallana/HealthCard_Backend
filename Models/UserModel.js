@@ -1,13 +1,12 @@
 const { Schema, model } = require("mongoose");
 const jwt = require("jsonwebtoken");
 
-const reportSchema = Schema(
+const accessPassSchema = Schema(
   {
     org_id: {
       type: String,
       required: true,
     },
-    files: [String],
   },
   { timestamps: true }
 );
@@ -26,17 +25,26 @@ const userSchema = Schema(
       type: String,
       required: true,
     },
+    gender: {
+      type: String,
+      enum: ["Male", "Female", "Other"],
+      required: true,
+    },
+    aadhar: {
+      required: true,
+      type: Number,
+    },
     password: {
       type: String,
       required: true,
     },
-    reports: [reportSchema],
-    qr: {
-      type: String,
-      default: function () {
-        return `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${this._id}`;
-      },
-    },
+    access: [accessPassSchema],
+    // qr: {
+    //   type: String,
+    //   default: function () {
+    //     return `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${this._id}`;
+    //   },
+    // },
   },
   { timestamps: true }
 );

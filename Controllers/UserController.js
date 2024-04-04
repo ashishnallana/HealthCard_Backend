@@ -104,6 +104,8 @@ module.exports.verifyOtp = async (req, res) => {
       const user = new User({
         name: req.body.name,
         mobileno: req.body.mobileno,
+        gender: req.body.gender,
+        aadhar: req.body.aadhar,
         email,
         password,
       });
