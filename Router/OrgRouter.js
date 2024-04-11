@@ -44,12 +44,15 @@ router.post("/get-org", orgMiddleware, async (req, res) => {
 });
 
 router.post("/add-report", orgMiddleware, async (req, res) => {
-  const { _id, pid, files } = req.body;
+  const { _id, pid, files, org_name } = req.body;
+  // const { _id, pid, files, p_name, org_name } = req.body;
   try {
     const newReport = new Report({
       org_id: _id,
       patient_id: pid,
       files,
+      // patient_name: p_name,
+      org_name,
     });
 
     const addedReport = await newReport.save();
