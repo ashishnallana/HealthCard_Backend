@@ -1,6 +1,9 @@
 # Health Card Backend
 
-Welcome to the Health Card Backend repository! This repository contains the backend/server code for the Health Card project, which aims to provide a comprehensive health record management system.
+Welcome to the Health Card Backend repository!
+Health Card is a comprehensive health record management system built using the MERN stack. It allows users to securely store and manage their medical records digitally, while also facilitating seamless communication with healthcare professionals. With features like real-time doctor consultation, medication management, and personalized health insights, Health Card empowers individuals to take control of their wellness journey effectively. Developed with a focus on accessibility, efficiency, and safety, Health Card aims to revolutionize the way healthcare information is stored, accessed, and managed.
+
+This repository contains the backend/server code for the Health Card project, which aims to provide a comprehensive health record management system.
 
 ## Setup
 
